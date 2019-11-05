@@ -9,6 +9,9 @@ then
   set -- "$@" --verbose
 fi
 
+# Build the site.
+tota build "$@"
+
 # Select a deploy target (default: netlify)
 if [ "${INPUT_HOST}" != "" ]
 then
@@ -16,9 +19,6 @@ then
 else
   set -- "$@" --host=netlify
 fi
-
-# Build the site.
-tota build "$@"
 
 # Deploy the site
 tota deploy "$@"
