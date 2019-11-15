@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set CI mode on
-set -- "$@" --ci
-
 # Enable verbose logging
 if [ "${INPUT_VERBOSE}" = "true" ]
 then
